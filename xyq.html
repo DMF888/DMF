@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时光信件</title>
+    <style>
+        /* 密码界面 */
+        #password-page {
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* 主内容区 */
+        #main-content {
+            display: none;
+            background: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        /* 照片容器 */
+       .photo-container {
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+       .current-photo {
+            width: 100%;
+            aspect-ratio: 9/16;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            cursor: pointer; /* 添加光标样式，表示可点击 */
+        }
+
+        /* 信件样式 */
+       .letter {
+            background: white;
+            padding: 25px;
+            margin: 30px 20px;
+            border-radius: 15px;
+            line-height: 1.8;
+            font-family: 'Microsoft YaHei';
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 密码验证 -->
+    <div id="password-page">
+        <h2 style="color:white;">我们的纪念日</h2>
+        <input type="password" id="password" placeholder="四位数">
+        <button onclick="checkPassword()" style="margin-top:15px;">开启</button>
+    </div>
+
+    <!-- 主内容 -->
+    <div id="main-content">
+        <div class="photo-container">
+            <div class="current-photo"></div>
+        </div>
+
+        <div class="letter">
+            <h2 style="text-align:center;">致不再属于我的月亮：</h2>
+            <p>徐雅琪
+   写这封信时，豆包正趴在我腿上打盹——抱歉，是骗你的，其实它早就不在我身边了。就像我总骗自己“没有你也能活得很好”，却在回到方山望时，被那熟悉的环境扎得生疼。
+每次翻相册看到豆包，总会想起你抱着它说‘以后咱们家要有个大院子让它随便跑’——那时候我嘴上敷衍，心里却偷偷想象过那个画面。
+这三年，我一直像个傲慢的傻瓜。仗着你对我的爱，就肆无忌惮地俯视你的付出：你跨半个城市送来的食物，我说‘不好吃’；甚至你哭着问我‘能不能对我温柔点’，我都用一句‘受不了就分’堵回去。
+当初提分手时说的‘不爱了’，是我这辈子最后悔的谎话。真正的原因是我害怕面对你的期待，害怕自己做不到你想要的未来，所以干脆用最蠢的方式逃避……你工作压力大的时候，我明明可以给你一个拥抱，却转身打开了游戏；你问我‘能不能早点结婚’，我躲闪的样子一定让你心凉透了。
+“记得那次你带着烟味回家，我第一反应不是心疼你被工作的压力逼到抽烟，而是像审判官一样宣布‘再抽就分手’。后来才懂，真正该被质问的是那个躲在游戏里逃避现实的自己——你明明在暴雨里撑着破伞往前走，我却站在屋檐下嫌你姿势不够优雅。”
+“这三年，我们从一场绿色落日开始，到在方山望一起做饭；从你工作压力大躲进楼梯间抽烟，到我赌气提分手时你红着眼说‘能不能别扔下我’……明明每一帧都刻在骨头里，我却总摆出一副高高在上的样子。
+我用‘不爱了’当借口逃离，不过是想捂住耳朵不听你哭——因为我根本不知道，爱不是施舍，而是两个平等的人互相托住坠落的手。”
+“分开这82天，我终于懂了：爱不是谁该捧着谁，而是雨天共撑一把伞的狼狈，是你看穿我的懦弱却依然伸手的温柔。我曾以为低头是输，现在才明白，能和你并肩输给生活，才是赢。”
+那个总把‘分手’当武器威胁你的混蛋终于死了。现在我能通宵加班改方案，能和同事吵完架再冷静沟通，甚至开始攒钱规划职业方向……但这些进步来得太迟了，我永远欠你一句‘对不起’。
+“我曾以为爱情是场征服游戏，直到失去你才明白，真正的爱是把彼此的碎片捡起来拼成未来。“爱情是和旧的人勇闯新地图，不是拿新人走老剧情。”那些在方山望煮糊的饭、在紫金山迷路的夜、给豆包剪指甲时身上的爪痕……这些碎片早把我钉死在我们的过去。
+我认命了，徐雅琪。
+写这些不是要你原谅或回头，只希望如果某天你累了，还能想起这个曾被你教会如何去爱的男孩，一直在笨拙地练习如何与你平等相拥。
+如果你愿意……
+今年白色情人节那天，我会带着向日葵,在斗兽场等一场审判。你可以带着豆包来骂我，来嘲笑这个终于学会低头的傻瓜。
+要是等到日落还没人影——
+我就把攒钱买的戒指扔进玄武湖，连同那个傲慢的我自己。
+不合格饲养员
+邓茗方
+
+
+</p>
+        </div>
+
+        <audio id="bgm" autoplay loop hidden>
+            <source src="know.mp3"  type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        // 密码验证 
+        function checkPassword() {
+            if (document.getElementById('password').value  === '0507') {
+                document.getElementById('password-page').style.display  = 'none';
+                document.getElementById('main-content').style.display  = 'block';
+                document.getElementById('bgm').play(); 
+                initPhotos();
+            } else {
+                alert('密码错误');
+            }
+        }
+
+        // 照片系统 
+        let currentIndex = 0;
+        const photos = Array.from({  length: 36 }, (_, i) => `photo${i + 1}.jpg`);
+
+        function initPhotos() {
+            // 显示第一张照片
+            document.querySelector('.current-photo').style.backgroundImage  = `url('${photos[0]}')`;
+
+            // 给照片区域添加点击事件
+            document.querySelector('.current-photo').addEventListener('click',  () => {
+                currentIndex = (currentIndex + 1) % photos.length; 
+                updatePhoto();
+            });
+        }
+
+        function updatePhoto() {
+            const photoElement = document.querySelector('.current-photo'); 
+            photoElement.style.opacity  = 0;
+            // 渐变过渡效果
+            setTimeout(() => { 
+                photoElement.style.backgroundImage  = `url('${photos[currentIndex]}')`;
+                photoElement.style.opacity  = 1;
+            }, 300);
+        }
+    </script>
+</body>
+
+</html>
